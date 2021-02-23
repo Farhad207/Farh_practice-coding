@@ -2,18 +2,18 @@
 // load routes
 const todos = require("./routes/todos");
 const users = require("./routes/users");
-// db config	// db config
-import db from "./config/database";	const db = require("./config/database");
-import config from "./config/passport";	const config = require("./config/passport");
-import users from "./routes/users";	const passport = require("passport");
-import passport from "passport";	const mongoose = require("mongoose");
-import mongoose from "mongoose";	const session = require("express-session");
-import session from "express-session";	const flash = require("connect-flash");
-import flash from "connect-flash";	const methodOverride = require("method-override");
-import methodOverride from "method-override";	const bodyParser = require("body-parser");
-import bodyParser from "body-parser";	const exphbs = require("express-handlebars");
-import exphbs from "express-handlebars";	const path = require("path");
-import path from "path";	const express = require("express");
+// db config
+const db = require("./config/database");
+const config = require("./config/passport");
+const passport = require("passport");
+const mongoose = require("mongoose");
+const session = require("express-session");
+const flash = require("connect-flash");
+const methodOverride = require("method-override");
+const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars");
+const path = require("path");
+const express = require("express");
 
 const app = express();
 // passport config
