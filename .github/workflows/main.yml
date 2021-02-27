@@ -36,4 +36,4 @@ jobs:
           ls -lrt 
           docker build -t todo .
           docker images
-          echo "success
+          echo "success"
