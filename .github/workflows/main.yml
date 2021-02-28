@@ -34,6 +34,6 @@ jobs:
         run: |
           pwd
           ls -lrt 
-          docker build -t todo ./
+          docker build -t todo .
           docker images
           echo "success"
