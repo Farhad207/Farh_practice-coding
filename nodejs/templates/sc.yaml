@@ -1,0 +1,8 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: {{ .Values.provisioner.storageclassname }}
+provisioner: {{ .Values.provisioner.storageclasspath }}
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+
