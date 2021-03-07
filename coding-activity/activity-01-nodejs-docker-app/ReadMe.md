@@ -24,6 +24,8 @@ $ yarn --version
 * run the app 
 
 ```javascript
+* run the application using yarn start or nodejs 
+```javascript
 $ yarn start
 yarn run v1.22.5
 $ node app.js
