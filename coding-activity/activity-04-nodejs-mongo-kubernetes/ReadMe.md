@@ -63,7 +63,11 @@ MongoDB connected...
 
 ```
 
+![](/images/coding-activity/activity-04-nodejs-mongo-kubernetes/k8s_app_running_on_port_31110.PNG)
+
+
 * please see the screenshots
+![](/images/coding-activity/activity-04-nodejs-mongo-kubernetes/K8s_app_and_mongo_connected.PNG)
 
 
 
