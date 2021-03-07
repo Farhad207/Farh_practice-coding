@@ -14,3 +14,11 @@ docker ps -a | grep mongo
 68331d1f97ad   mongo                      "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes               0.0.0.0:27017->27017/tcp   mongodb
 ```
 
+* since the mongo DB is running , we can connect our app to db by using the below command
+```javascript
+yarn start
+yarn run v1.22.5
+$ node app.js
+listening on port 5000
+```
+
