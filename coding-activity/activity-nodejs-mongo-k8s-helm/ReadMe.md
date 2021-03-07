@@ -65,3 +65,7 @@ ubuntu@ip-172-31-2-74:~/Farh_practice-coding$ helm list
 NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
 farhadnodejsapp default         1               2021-02-28 18:58:05.653730659 +0000 UTC deployed        nodejs-0.1.0    1.16.0
 ```
+
+![](/images/coding-activity/activity-nodejs-mongo-k8s-helm/helm_01.PNG)
+
+![](/images/coding-activity/activity-nodejs-mongo-k8s-helm/helm02.PNG)
