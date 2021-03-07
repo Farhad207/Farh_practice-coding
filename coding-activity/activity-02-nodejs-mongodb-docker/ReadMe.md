@@ -20,5 +20,6 @@ yarn start
 yarn run v1.22.5
 $ node app.js
 listening on port 5000
+MongoDB connected...
 ```
 
