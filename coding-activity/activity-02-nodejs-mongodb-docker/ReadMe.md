@@ -22,4 +22,16 @@ $ node app.js
 listening on port 5000
 MongoDB connected...
 ```
+* Welcome page for todo app
+![](/images/coding-activity/activity-02-nodejs-mongodb-docker/todo_app_page.PNG)
 
+
+* App is connected to DB
+![](/images/coding-activity/activity-02-nodejs-mongodb-docker/added_todos_using_mongo_and_docker.PNG)
+
+
+
+
+
+* After adding the list
+![](/images/coding-activity/activity-02-nodejs-mongodb-docker/todo_list_saved_in_DB.PNG)
