@@ -1,5 +1,1 @@
--	I have used GitHub, AWS, Docker, terraform, Kubernetes and helm to build a fully automated infrastructure and CI/CD solution
--	I have used Github as a SCM tool to mange my code, added the dockerfile , created the image using github actions and pushed the same to docker repository(docker hub) completing my continuous integration.
--	I have used terraform to build the infrastructure resources such as VPC, subnets, EC2 ELB, security groups etc. Then used KOPS to build Kubernetes cluster. 
--	I Created the kompose file to bring the nodejs and mongodb application up. 
--	I have Installed the helm charts to deploy the application 
+
