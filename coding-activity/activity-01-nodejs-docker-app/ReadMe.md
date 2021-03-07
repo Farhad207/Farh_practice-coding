@@ -35,7 +35,7 @@ listening on port 5000
 * Create the Dockerfile 
 ```javascript
 vi Dockerfile
-```javascript
+```
 
 * Build the dockerfile
 ```javscript
