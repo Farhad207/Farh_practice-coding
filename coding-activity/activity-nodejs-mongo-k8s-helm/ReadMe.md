@@ -2,6 +2,23 @@
   deploy nodejs and mongo using helm
 </h1>
 
+* create a docker image and push it to the repository 
+```javascript
+$docker build -t farhad207/nojesapp .
+```
+* perform a docker login
+```javascript 
+$docker login -u farhad207
+password:
+login succeeded
+```
+* perofrm a docker push
+
+```javascript
+docker push farhad207/nodejs-mongodb 
+```
+
+
 * install helm on the cluster
 
 ```javascript
