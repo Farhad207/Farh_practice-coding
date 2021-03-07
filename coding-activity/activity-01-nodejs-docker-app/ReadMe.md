@@ -104,6 +104,6 @@ docker run --name nodeesapp -p 8080:8080 -d farhad207/nojesapp
 69016f446f527b9585df7c003799e3117f306dd78b0df04a5f6aeef6c8610b3d
 ```
 
-
+![](images/coding-activity/activity-01-nodejs-docker-app/using_yarn_running_locally_1st.PNG)
 
 
