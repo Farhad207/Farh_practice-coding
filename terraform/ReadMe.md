@@ -10,14 +10,14 @@ $ Install the kubectl binaries
 $	curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 $	mv ./kubectl ~/usr/bin 
 ```
-number one -----------------------------------------------
+![](/images/terraform/001_kubectl.PNG)
 
 * Similarly, download the latet version of Kops binaries and copy to the bin directory  
  ```javascript
  $ curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 
  ```
- 
- second --------------------------------------------------------------------
+ ![](/images/terraform/002_kops.PNG)
+
  
  * check terraform version
 ```javascript
@@ -32,6 +32,13 @@ $ ls -lrt ~/.ssh/farhadkop.pub
 ```
 
 * Create an S3 bucket to keep the state files
+![](/images/terraform/003_create_an_S3.PNG)
+
+* Create a hosted zone
+![](/images/terraform/005_hosted_zone.PNG)
+
+* after creation 
+!![](/images/terraform/004_create_the_hosted_zone.PNG)
 
 * create kubernetes cluster 
  ```javascript
@@ -49,6 +56,9 @@ $ ls -lrt ~/.ssh/farhadkop.pub
   --target=terraform \
   --ssh-public-key=~/.ssh/farhadkop.pub
 ```
+* Kubernetes,tf file will be created 
+![](/images/terraform/006_terraform_cluster_file.PNG)
+
 * execute the terraform file to create the cluster
 ```javascript
 $ cd kopskubernetes_terraform
@@ -61,4 +71,5 @@ total 28
 drwxr-xr-x 2 ubuntu ubuntu  4096 Feb 28 07:37 data
 
 ```
+
 
