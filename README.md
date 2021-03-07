@@ -49,11 +49,48 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
  
 The above errors were fixed by adding the require(“../ module/user’) above the express as shown in the screenshot (CommitID from github 1823c5a25d4b3fc68043d407751c42bb789fb436) 
 
+
+
 ![](/images/terraform/015_mangoose_fixed.PNG)
 
 
 <h1 id="my-custom-anchor-name">
   Continuous integration
 </h1>
+
+* Containerize the application.
+For containerizing the application, I used docker as a runtime engine and wrote a Dockerfie which is attached in my repository
+
+* Build the image and push it to dockerhub 
+I used github actions here >>write your own workflows option. I added the below code to build the image and did the integration with Dockerhub to push it as and when we have a commit.
+
+Github -> dockerhub integration
+
+1.	Go to your github acount click on builds
+2.	Click on link to github 
+3.	Give your source repository, select the repo from where you want to push the images 
+4.	Select the branch and save the settings. 
+
+* Creating the CI pipleine , add the github actions
+![](/images/terraform/016_github_actions.PNG)
+
+* Create a docker repository in dockerhub
+![](/images/terraform/017_docker_hub.PNG)
+
+* now link the github repository 
+![](/images/terraform/018_add_github_from_dockerHub.PNG)
+
+* add the github repository and the branch from which the image has to be pulled
+![](/images/terraform/019_add_the_branch.PNG)
+
+* integrated the Github and Docker hub repo
+```javascript
+docker pull farhad207/nodejs-mongodb
+```
+![](/images/terraform/020_added_docker_pull.PNG)
+
+
+
+
 
 
