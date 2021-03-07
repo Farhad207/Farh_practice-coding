@@ -52,5 +52,8 @@ The above errors were fixed by adding the require(“../ module/user’) above t
 ![](/images/terraform/015_mangoose_fixed.PNG)
 
 
+<h1 id="my-custom-anchor-name">
+  Continuous integration
+</h1>
 
 
