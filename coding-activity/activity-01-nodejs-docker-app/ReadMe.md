@@ -4,5 +4,7 @@
 
 * Please install the yarn utility
 
-$
-
+```javascript
+yarn --version
+0.32
+```
