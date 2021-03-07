@@ -70,7 +70,7 @@ total 28
 -rw-r--r-- 1 ubuntu ubuntu 23769 Feb 28 07:37 kubernetes.tf
 drwxr-xr-x 2 ubuntu ubuntu  4096 Feb 28 07:37 data
 
-```javascript
+```
 * please execute the terraform plan command to show the infrastructure 
 ```javascript
 $ terraform plan -out=kops_fartest.com
