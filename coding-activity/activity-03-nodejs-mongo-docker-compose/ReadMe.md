@@ -110,3 +110,12 @@ mongodb    | {"t":{"$date":"2021-03-07T09:30:27.956+00:00"},"s":"I",  "c":"NETWO
 mongodb    | {"t":{"$date":"2021-03-07T09:30:27.969+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.19.0.3:43234","client":"conn1","doc":{"driver":{"name":"nodejs-core","version":"3.3.3"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.4.0-1038-aws"},"platform":"Node.js v15.11.0, LE"}}}
 todo       | MongoDB connected...
 ```
+* checking the docker containers 
+
+```javascript 
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                      NAMES
+b1aa44d0d384   app_app   "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:5000->5000/tcp     todo
+c24e048069f2   mongo     "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:27017->27017/tcp   mongodb
+```
+
