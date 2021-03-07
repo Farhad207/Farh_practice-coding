@@ -22,3 +22,8 @@ The following additional packages will be installed:
 $ yarn --version
 0.32
 ```
+* run the app 
+* 
+```javascript
+$ yarn --version
+0.32
