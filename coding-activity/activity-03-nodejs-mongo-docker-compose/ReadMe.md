@@ -120,3 +120,8 @@ b1aa44d0d384   app_app   "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes
 c24e048069f2   mongo     "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:27017->27017/tcp   mongodb
 ```
 
+* application running using docker-compose
+![](/images/coding-activity/activity-03-nodejs-mongo-docker-compose/using_docker_compose.PNG)
+
+* Application connected to mongodb
+![](/images/coding-activity/activity-03-nodejs-mongo-docker-compose/MongoDB_connected_to_todo_nodejs_app.PNG)
