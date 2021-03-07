@@ -92,6 +92,18 @@ Removing intermediate container b496948beac5
 Successfully built 4210798c1ade
 Successfully tagged farhad207/nojesapp:latest
 ```
+* check if the image is created 
+```javascript
+docker images
+REPOSITORY           TAG                   IMAGE ID       CREATED         SIZE
+farhad207/nojesapp   latest                4210798c1ade   3 minutes ago   207MB
+```
+* run the docker container
+```javasscript
+docker run --name nodeesapp -p 8080:8080 -d farhad207/nojesapp
+69016f446f527b9585df7c003799e3117f306dd78b0df04a5f6aeef6c8610b3d
+```
+
 
 
 
