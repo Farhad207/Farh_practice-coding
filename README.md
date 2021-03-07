@@ -45,7 +45,8 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
 ```
-Resolution 
+* Resolution ---
+ 
 The above errors were fixed by adding the require(“../ module/user’) above the express as shown in the screenshot (CommitID from github 1823c5a25d4b3fc68043d407751c42bb789fb436) 
 
 ![](/images/terraform/015_mangoose_fixed.PNG)
