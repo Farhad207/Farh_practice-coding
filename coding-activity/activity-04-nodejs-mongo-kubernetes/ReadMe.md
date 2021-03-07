@@ -2,6 +2,8 @@
   Node.js and mongodb application on kubernetes
 </h1>
 
+* deploy the application using k8s files
+
 ```javascript
  kubectl apply -f .
 deployment.apps/app configured
@@ -10,7 +12,10 @@ persistentvolumeclaim/mongodb-claim0 configured
 deployment.apps/mongodb configured
 persistentvolume/mongodb-pv unchanged
 service/mongodb configured
+```
+* check all the resources 
 
+```javascript
 
 $ kubectl get svc
 NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)           AGE
@@ -40,5 +45,8 @@ listening on port 5000
 MongoDB connected...
 
 ```
+
+* please see the screenshots
+
 
 
