@@ -8,6 +8,8 @@
 helm version
 version.BuildInfo{Version:"v3.5.2", GitCommit:"167aac70832d3a384f65f9745335e9fb40169dc2", GitTreeState:"dirty", GoVersion:"go1.15.7"}
 
+
+
 $ helm install farhadnodejsapp nodejs/
 NAME: farhadnodejsapp
 LAST DEPLOYED: Sun Feb 28 18:58:05 2021
