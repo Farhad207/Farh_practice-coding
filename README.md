@@ -168,7 +168,7 @@ drwxrwxr-x 8 ubuntu ubuntu 4096 Feb 28 18:47 app
 -rw-rw-r-- 1 ubuntu ubuntu   22 Feb 28 18:47 README.md
 drwxrwxr-x 3 ubuntu ubuntu 4096 Feb 28 18:50 nodejs
 ```
-* pull the image from dockerhub and add the same to values.yaml 
+*  add the image to be pulled from dockerhub to values.yaml 
 
 ```javascript
 vi values.yaml
@@ -229,8 +229,7 @@ $ kubectl get po
 NAME                      READY   STATUS    RESTARTS   AGE
 app-7c54c5d78d-nmbz9      1/1     Running   0          38s
 mongodb-b55b6c8fd-f2qkt   1/1     Running   0          38s
-ubuntu@ip-172-31-2-74:~/Farh_practice-coding$
-ubuntu@ip-172-31-2-74:~/Farh_practice-coding$
+
 
 $ kubectl get svc
 NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)           AGE
@@ -243,7 +242,7 @@ NAME            NAMESPACE       REVISION        UPDATED                         
 farhadnodejsapp default         1               2021-02-28 18:58:05.653730659 +0000 UTC deployed        nodejs-0.1.0    1.16.0
 
 ```
-* application is running on 
+* application is running 
 
 ![](/images/terraform/021_helm.PNG)
 
