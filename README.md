@@ -54,6 +54,7 @@ const todos = require("./routes/todos");
 ![](/images/terraform/014_mangoose.PNG)
 
 ```javascript
+$ yarn start
 ERROR throw new mongoose.Error.MissingSchemaError(name);
       ^
 MongooseError [MissingSchemaError]: Schema hasn't been registered for model "users".
