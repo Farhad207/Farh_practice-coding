@@ -243,5 +243,11 @@ NAME            NAMESPACE       REVISION        UPDATED                         
 farhadnodejsapp default         1               2021-02-28 18:58:05.653730659 +0000 UTC deployed        nodejs-0.1.0    1.16.0
 
 ```
+* application is running on 
+
+![](/images/terraform/021_helm.PNG)
+
+![](/images/terraform/022_helm.PNG)
+
 
 
