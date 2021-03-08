@@ -171,7 +171,7 @@ drwxrwxr-x 3 ubuntu ubuntu 4096 Feb 28 18:50 nodejs
 * pull the image from dockerhub and add the same to values.yaml 
 
 ```javascript
-'vi values.yaml
+vi values.yaml
 # Default values for nodejs.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
