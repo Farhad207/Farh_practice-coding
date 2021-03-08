@@ -124,7 +124,124 @@ docker pull farhad207/nodejs-mongodb
 ![](/images/terraform/020_added_docker_pull.PNG)
 
 
+<h1 id="my-custom-anchor-name">
+  Continoud deployment 
+</h1>
+
+Once the image is pushed from github to Docker hub through continuous integration , Helm will pull the image and deploy the application 
+I used Kubernetes to deploy nodejs and mongodb app using helm .
+Below are the steps to be followed
+
+* install helm3 
+```javascript
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+helm version
+version.BuildInfo{Version:"v3.5.2", GitCommit:"167aac70832d3a384f65f9745335e9fb40169dc2", GitTreeState:"dirty", GoVersion:"go1.15.7
+```
+
+* Database not connected error fixed 
+
+When I deployed the application with mongodb://localhost/tododbdev in database config , The application did not connect to the DB. Hence I changed the localhost to mongodb which fixed the errors
+
+```javascript
+Before 
+module.exports = {
+    mongoURI: 'mongodb://localhost/tododb-dev'
+};
+After fixing
+module.exports = {
+    mongoURI: 'mongodb://mongodb/tododb-dev'
+};
+```
+
+* Deploy application using helm
+
+I have created helm charts in the folder nodejs. 
+
+```javascript
+git clone https://github.com/Farhad207/Farh_practice-coding.git
+:~/Farh_practice-coding$ ls -lrt
+total 12
+drwxrwxr-x 8 ubuntu ubuntu 4096 Feb 28 18:47 app
+-rw-rw-r-- 1 ubuntu ubuntu   22 Feb 28 18:47 README.md
+drwxrwxr-x 3 ubuntu ubuntu 4096 Feb 28 18:50 nodejs
+```
+* pull the image from dockerhub and add the same to values.yaml 
+
+```javascript
+'vi values.yaml
+# Default values for nodejs.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: farhad207/nodejs-mongodb
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+port:
+  container: 5000
 
 
+service:
+  type: NodePort
+  port: 5000
+
+
+mongopv:
+  storageclassname: manual
+  hostpath: "/mnt/mongo_data"
+
+provisioner:
+  storageclassname: manual
+  storageclasspath: k8s.io/minikube-hostpath
+
+mongodeploy:
+  imagename: mongo
+
+mongosvc:
+  type: NodePort
+
+
+```
+
+* Run the application using helm install
+
+```javascript
+
+$ helm install farhadnodejsapp nodejs/
+NAME: farhadnodejsapp
+LAST DEPLOYED: Sun Feb 28 18:58:05 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services farhadnodejsapp)
+  export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo http://$NODE_IP:$NODE_PORT
+
+$ kubectl get po
+NAME                      READY   STATUS    RESTARTS   AGE
+app-7c54c5d78d-nmbz9      1/1     Running   0          38s
+mongodb-b55b6c8fd-f2qkt   1/1     Running   0          38s
+ubuntu@ip-172-31-2-74:~/Farh_practice-coding$
+ubuntu@ip-172-31-2-74:~/Farh_practice-coding$
+
+$ kubectl get svc
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)           AGE
+app          NodePort    10.111.92.87     <none>        5000:31110/TCP    48s
+kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP           3h51m
+mongodb      NodePort    10.101.206.191   <none>        27017:30655/TCP   48s
+
+helm list
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+farhadnodejsapp default         1               2021-02-28 18:58:05.653730659 +0000 UTC deployed        nodejs-0.1.0    1.16.0
+
+```
 
 
