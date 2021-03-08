@@ -1,0 +1,27 @@
+version: "2"
+services:
+  app:
+    container_name: node
+    build: .
+    restart: always
+    ports:
+    - "5000:5000"
+    links:
+      - mongodb
+    networks:
+      - end
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+    networks:
+      - end
+
+networks:
+  end:
+    driver: bridge
