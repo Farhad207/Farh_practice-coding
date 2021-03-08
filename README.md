@@ -250,4 +250,8 @@ farhadnodejsapp default         1               2021-02-28 18:58:05.653730659 +0
 ![](/images/terraform/022_helm.PNG)
 
 
+Please check the coding-activity for all the deployment files and strategy 
+
+https://github.com/Farhad207/Farh_practice-coding/tree/master/coding-activity
+
 
