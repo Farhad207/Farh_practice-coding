@@ -109,7 +109,6 @@ todo       | listening on port 5000
 mongodb    | {"t":{"$date":"2021-03-07T09:30:27.956+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.19.0.3:43234","connectionId":1,"connectionCount":1}}
 mongodb    | {"t":{"$date":"2021-03-07T09:30:27.969+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.19.0.3:43234","client":"conn1","doc":{"driver":{"name":"nodejs-core","version":"3.3.3"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.4.0-1038-aws"},"platform":"Node.js v15.11.0, LE"}}}
 todo       | MongoDB connected...
-todo       | { email: 'farhad207@gmail.com', compose }
 ```
 * checking the docker containers 
 
