@@ -10,6 +10,39 @@
 
 when i cloned the Git hub Repository and tried to run the yarn, and Yarn start, I got the import errors as shown below:
 
+```javascript
+$ yarn install
+yarn install v1.22.5
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 1.45s.
+
+$ yarn start
+yarn run v1.22.5
+$ node app.js
+/home/ubuntu/coding-task-devops/app/app.js:3
+import todos from "./routes/todos";
+^^^^^^
+
+SyntaxError: Unexpected token import
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:616:28)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:188:16)
+    at bootstrap_node.js:609:3
+error Command failed with exit code 1.
+
+```
+
+
+
 ![](/images/terraform/013_yarn_error.PNG)
 
 * Resolution for above Error: I added conts todos and users as shown below, I used require instead of from and const instead of import. This can be found in the commit (commit id - 4b8beaef905ff5248190b0c21cf36e6d895ac27c)
