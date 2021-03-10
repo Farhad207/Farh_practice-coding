@@ -70,5 +70,8 @@ MongoDB connected...
 ![](/images/coding-activity/activity-04-nodejs-mongo-kubernetes/K8s_app_and_mongo_connected.PNG)
 
 
-* Added todo lists
+* DB connected 
 ![](/images/coding-activity/activity-04-nodejs-mongo-kubernetes/k8s_mongo_db_connected.PNG)
+
+* checking if the app is getting connected to MONgodb by rebooting the instances 
+![](/images/coding-activity/activity-04-nodejs-mongo-kubernetes/this_is_from_k8s_files.PNG)
